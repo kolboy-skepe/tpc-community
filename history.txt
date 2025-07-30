@@ -1,0 +1,52 @@
+    1  cd
+    2  ls
+    3  Tpc-community GitHub Repo
+    4  cd ~/Project_Navigator
+    5  ls
+    6  git config --global user.name "kolboy-skepe"
+    7  git config --global user.email "skepeza@gmail.com"
+    8  ssh-keygen -t ed25519 -C "skepeza@gmail.com"
+    9  # Press Enter 3 times
+   10  cat ~/.ssh/id_ed25519.pub
+   11  ssh-keygen -t ed25519 -C "skepeza@gmail.com"
+   12  no
+   13  ls
+   14  git status
+   15  ls
+   16  nano summary.txt
+   17  ls
+   18  git add .
+   19  git commit -m "feat: Added project summary and cleaned up files"
+   20  git push origin main
+   21  ls -al ~/.ssh
+   22  ssh-keygen -t ed25519 -C "skepeza@gmail.com"
+   23  eval "$(ssh-agent -s)"
+   24  ssh-add ~/.ssh/id_ed25519
+   25  cat ~/.ssh/id_ed25519.pub
+   26  git remote set-url origin https://github.com/kolboy-skepe/Project_Navigator.git
+   27  git push origin main
+   28  termux-open-url https://github.com/kolboy-skepe/Project_Navigator
+   29  # Create repository
+   30  mkdir Tpc_Community
+   31  cd Tpc_Community
+   32  # Create directories and files
+   33  mkdir -p automation_scripts documentation
+   34  touch automation_scripts/deploy.sh documentation/style_guide.txt
+   35  # Verify structure
+   36  tree
+   37  ls
+   38  git init
+   39  # First commit
+   40  git add .
+   41  git commit -m "Initial project structure"
+   42  # Second commit (add purpose)
+   43  echo "Project Purpose: Demonstrate terminal skills and GitHub workflow" > README.md
+   44  git add README.md
+   45  git commit -m "docs: Add project purpose to README"
+   46  # Third commit (update style guide)
+   47  echo "3. Comments: Required for complex logic" >> documentation/style_guide.txt
+   48  git add documentation/style_guide.txt
+   49  git commit -m "docs: Add commenting rules to style guide"
+   50  git log --oneline
+   51  # Should show 3 commits
+   52  history > history.txt
